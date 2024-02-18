@@ -3,7 +3,7 @@ import { prisma } from "../../lib/prisma";
 import { FastifyInstance } from "fastify";
 
 export async function createPool(app: FastifyInstance) {
-  app.post("/pools", async (request, reply) => {
+  app.post("/polls", async (request, reply) => {
     const createPollBody = z.object({
       title: z.string(),
       options: z.array(z.string()),
